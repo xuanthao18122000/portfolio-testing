@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 3 – Viết Prompt hiệu quả cho các tác vụ học tập · Portfolio Dương Thị Hương Giang</title>
+<meta name="description" content="Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=1794900720">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d9e75'/%3E%3Ctext x='16' y='21' font-family='Georgia' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3EHG%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Điều hướng chính">
+    <a class="brand" href="index.html">Port<span>folio</span></a>
+    <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false"><span></span></button>
+    <ul class="menu">
+      <li><a href="index.html">Giới thiệu</a></li>
+      <li class="has-sub is-active"><a href="projects.html">Dự án <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <ul class="submenu"><li><a href="bai-1.html"><span class="num">1</span><span class="t">Thao tác cơ bản với tệp tin và thư mục</span></a></li><li><a href="bai-2.html"><span class="num">2</span><span class="t">Tìm kiếm và đánh giá thông tin học thuật</span></a></li><li><a href="bai-3.html" class=is-active><span class="num">3</span><span class="t">Viết Prompt hiệu quả cho các tác vụ học tập</span></a></li><li><a href="bai-4.html"><span class="num">4</span><span class="t">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</span></a></li><li><a href="bai-5.html"><span class="num">5</span><span class="t">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</span></a></li><li><a href="bai-6.html"><span class="num">6</span><span class="t">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</span></a></li></ul>
+      </li>
+      <li><a href="conclusion.html">Tổng kết</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="page-head">
+  <div class="inner">
+    <div class="crumbs"><a href="projects.html">II. Dự án</a> / Bài 3</div>
+    <h2>Bài 3. Viết Prompt hiệu quả cho các tác vụ học tập</h2>
+    <p>Chương 3: Tổng quan về trí tuệ nhân tạo</p>
+  </div>
+</section>
+<div class="wrap-col">
+<article class="project-card reveal">
+  <div class="project-card-header">
+    <div class="bai-badge">3</div>
+    <div class="project-title-wrap">
+      <div class="project-subject">Bài tập 3 · Chương 3 · Mục 3.4</div>
+      <div class="project-title">Viết Prompt hiệu quả cho các tác vụ học tập</div>
+    </div>
+    <span class="status-badge status-wip">Đang thực hiện</span>
+  </div>
+  <div class="project-body">
+    <div class="project-section"><div class="project-section-label">a) Mục tiêu bài tập</div><p>Phát triển kỹ năng viết prompt hiệu quả để khai thác các mô hình ngôn ngữ lớn trong học tập. Với 3 tác vụ học tập, mỗi tác vụ viết 3 phiên bản prompt (cơ bản, cải tiến, nâng cao), thử nghiệm trên công cụ AI, so sánh kết quả và rút ra nguyên tắc viết prompt.</p></div>
+    <div class="project-section"><div class="project-section-label">b) Tóm tắt quá trình thực hiện</div><p>Thiết kế 3 cấp độ prompt (cơ bản → cải tiến → nâng cao) cho 3 tác vụ học tập gắn với ngành mỹ thuật – thiết kế: tóm tắt bài đọc về bố cục, giải thích luật xa gần, tạo câu hỏi ôn tập lý thuyết màu sắc. Mỗi prompt chạy trong một phiên trò chuyện mới để kết quả không ảnh hưởng lẫn nhau, sau đó so sánh chất lượng phản hồi.</p>
+<p><strong>Công cụ thử nghiệm:</strong> Claude Sonnet (Anthropic) — mỗi prompt chạy trong một phiên trò chuyện mới, độc lập.<br><small>Bài đọc Tác vụ 1: phần mở đầu, mục “Elements of design” và “Compositional techniques” của bài “Composition (visual arts)”, Wikipedia tiếng Anh (bản ngày 20/10/2026, giấy phép CC BY-SA), khoảng 900 từ.</small></p>
+<p><strong>Cấu trúc prompt nâng cao:</strong> Vai trò → Bối cảnh → Nhiệm vụ / Các bước → Yêu cầu → Ví dụ mẫu → Định dạng.</p>
+<p><strong>Bài học rút ra:</strong> Prompt nâng cao cho kết quả tốt nhất ở cả 3 tác vụ, nhưng không phải vì dài hơn: prompt cơ bản cũng cho câu trả lời dài (566–1.000 từ) nhưng lan man. Phần tạo khác biệt lớn nhất là <b>bối cảnh</b> (AI biết người hỏi là ai, gặp khó khăn gì) và <b>ví dụ mẫu</b> (AI bắt chước đúng định dạng, văn phong). Ngược lại, giới hạn độ dài thường bị vượt nhẹ (Tác vụ 1 và 2) nên vẫn cần tự rút gọn lại.</p>
+<div class="task-label">Tác vụ 1 — Tóm tắt tài liệu học thuật</div><p class="task-goal">Mục đích: Tóm tắt một bài đọc về các nguyên lý bố cục trong hội họa để chuẩn bị thuyết trình.</p><div class="prompt-grid"><div class="prompt-col p-basic"><div class="prompt-head">Prompt Cơ bản</div><div class="prompt-box"><div class="prompt-text">Tóm tắt bài đọc này:<br>[dán bài đọc]</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Chỉ có yêu cầu, không có bối cảnh, độ dài hay định dạng.</div><div class="prompt-result"><strong>Kết quả:</strong> 650 từ. AI gần như dịch lại toàn bộ bài đọc thành gạch đầu dòng, giữ cả chi tiết phụ (nguyên lý Scheimpflug, khuôn mặt theo hình tam giác). Không chọn lọc ý chính, độ dài bằng khoảng 70% bài gốc, khó dùng ngay để thuyết trình.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">## Tóm tắt bài đọc: Bố cục (Composition) trong nghệ thuật thị giác
+
+**Khái niệm:** Bố cục là cách sắp xếp, tổ chức các thành phần trong một tác phẩm nghệ thuật. Tùy ngữ cảnh, nó còn được gọi là thiết kế, hình thức, trật tự thị giác hay cấu trúc hình thức. Trong thiết kế đồ họa báo in và dàn trang, nó thường được gọi là *page layout*. Bố cục khác với **chủ đề** (nội dung được miêu tả). Ví dụ, cùng chủ đề &quot;Thánh George và con rồng&quot; nhưng có thể được thể hiện bằng rất nhiều bố cục khác nhau.
+
+**7 yếu tố thiết kế (elements of design):**
+- **Đường nét (Line):** lối đi thị giác dẫn mắt người xem
+- **Hình dạng (Shape):** vùng được xác định bởi đường biên, hình học hoặc hữu cơ
+- **Màu sắc (Color):** sắc độ với các giá trị và cường độ khác nhau
+- **Kết cấu (Texture):** chất bề mặt tạo cảm giác xúc giác
+- **Giá trị/Sắc độ (Value):** việc đánh bóng để nhấn mạnh khối
+- **Khối (Form):** chiều dài, rộng, sâu (3D)
+- **Không gian (Space):** khoảng chiếm bởi vật thể (dương) hoặc khoảng giữa các vật thể (âm)
+
+**Các kỹ thuật bố cục:** Nhằm tạo sự thống nhất cho tác phẩm, thường là sắp xếp cân bằng để đẹp mắt. Tuy nhiên, một số nghệ sĩ như Salvador Dalí cố tình phá vỡ bố cục truyền thống để người xem suy nghĩ lại về sự cân bằng.
+
+1. **Quy tắc một phần ba (Rule of thirds):** chia khung hình thành 3 cột và 3 hàng, đặt các chi tiết quan trọng gần đường chia hoặc giao điểm của chúng. Mục đích là tránh để chủ thể hay đường chân trời chia đôi bức ảnh. Quy tắc này được xem là bản đơn giản hóa của tỷ lệ vàng (golden ratio), dù có rất ít bằng chứng cho thấy các nghệ sĩ xưa thực sự dùng tỷ lệ vàng.
+2. **Quy tắc số lẻ (Rule of odds):** số lượng chủ thể lẻ (ít nhất 3) thường thú vị và tự nhiên hơn số chẵn, vì số chẵn tạo ra đối xứng, có thể thiếu tự nhiên trong bố cục đời thường. Ví dụ, một người được hai người khác vây quanh thường tạo cảm giác thân thiện, ấm áp hơn.
+3. **Quy tắc không gian (Rule of space):** chừa khoảng trống theo hướng nhìn của nhân vật, hoặc phía trước người đang chạy, để tạo ảo giác chuyển động hoặc &quot;bong bóng ngữ cảnh&quot;. Các nghiên cứu cũng xác nhận người xem ưa thích cách này.
+4. **Sự đơn giản hóa (Simplification):** giảm chi tiết thừa để người xem tập trung vào chủ thể chính. Có thể dùng ánh sáng (vùng sáng, đường nét, hình vuông, màu sắc thu hút mắt) hoặc nét vẽ ít chi tiết ở rìa tranh.
+   - **Độ sâu trường ảnh nông (Shallow depth of field):** dùng khẩu độ lớn để làm mờ mọi thứ ngoài chủ thể (trong nhiếp ảnh và đồ họa 3D). Có thể dùng nguyên lý Scheimpflug để thay đổi mặt phẳng nét.
+5. **Hình học và đối xứng (Geometry and symmetry):** hình tam giác được xem là hình ngầm đẹp mắt trong tranh. Ở khuôn mặt hấp dẫn, mắt và miệng nằm trong các góc của một tam giác đều. Paul Cézanne dùng tam giác thành công trong tranh tĩnh vật. Bố cục tam giác tạo cảm giác vững chãi và mạnh mẽ.
+
+**Ý chính:** Bố cục tốt giúp dẫn mắt, tạo sự cân bằng và nhấn mạnh chủ thể bằng các nguyên tắc như quy tắc một phần ba, số lẻ, không gian, đơn giản hóa và hình học. Các nguyên tắc này là hướng dẫn chứ không phải luật bắt buộc, và nghệ sĩ có thể phá cách để đạt mục đích sáng tạo.
+</div></details></div></div></div><div class="prompt-col p-better"><div class="prompt-head">Prompt Cải tiến</div><div class="prompt-box"><div class="prompt-text">Tóm tắt bài đọc dưới đây về các nguyên lý bố cục trong hội họa cho sinh viên năm nhất ngành Mỹ thuật.<br>Yêu cầu: tối đa 200 từ, gồm 3–5 ý chính, mỗi ý 1–2 câu, cuối cùng có 1 câu kết luận.<br><br>Bài đọc:<br>[dán bài đọc]</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Thêm đối tượng người đọc, giới hạn độ dài, cấu trúc đầu ra.</div><div class="prompt-result"><strong>Kết quả:</strong> 266 từ. Đúng 5 ý chính, mỗi ý 1–2 câu và có câu kết luận, ngôn ngữ phù hợp sinh viên năm nhất. Hơi vượt giới hạn 200 từ; chưa có ví dụ minh họa cho từng ý.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">**Tóm tắt: Các nguyên lý bố cục trong hội họa**
+
+1. **Bố cục là cách tổ chức tác phẩm**, khác với chủ đề (nội dung được miêu tả). Cùng một chủ đề, như &quot;Thánh George và con rồng&quot;, có thể được thể hiện bằng rất nhiều bố cục khác nhau.
+
+2. **Bố cục dùng bảy yếu tố thiết kế làm &quot;từ vựng&quot;**: đường nét, hình dạng, màu sắc, chất cảm, giá trị sáng tối, khối và không gian. Các yếu tố này liên kết với nhau và với tổng thể tác phẩm.
+
+3. **Quy tắc một phần ba và quy tắc số lẻ** giúp tranh hài hòa hơn. Đặt điểm nhấn gần các đường chia ba (nhất là giao điểm) và ưu tiên số lượng chủ thể lẻ, ít nhất ba, để tránh sự đối xứng cứng nhắc.
+
+4. **Quy tắc không gian và sự giản lược** giúp hướng sự chú ý của người xem. Chừa khoảng trống phía trước chủ thể để gợi chuyển động, đồng thời loại bớt chi tiết thừa, dùng ánh sáng hoặc nét vẽ mờ ở rìa tranh để làm nổi bật trọng tâm.
+
+5. **Hình học và đối xứng**: hình tam giác tạo cảm giác vững chãi, mạnh mẽ, như Cézanne từng dùng trong tranh tĩnh vật. Tuy vậy, một số nghệ sĩ như Salvador Dalí chủ ý phá vỡ bố cục truyền thống.
+
+**Kết luận:** Nắm vững các nguyên lý này giúp bạn bố cục tranh có chủ đích, và khi đã hiểu quy tắc, bạn có thể vận dụng linh hoạt hoặc phá cách một cách sáng tạo.
+</div></details></div></div></div><div class="prompt-col p-best"><div class="prompt-head">Prompt Nâng cao</div><div class="prompt-box"><div class="prompt-text">[Vai trò] Bạn là giảng viên Lý luận Mỹ thuật với 15 năm kinh nghiệm giảng dạy.<br>[Bối cảnh] Tôi là sinh viên năm nhất, cần tóm tắt bài đọc dưới đây để thuyết trình 5 phút trước lớp.<br>[Các bước] Hãy làm lần lượt:<br>1. Xác định luận điểm chính của tác giả.<br>2. Liệt kê các nguyên lý bố cục được nhắc đến.<br>3. Chọn tối đa 5 ý quan trọng nhất.<br>4. Viết bản tóm tắt.<br>[Định dạng] Trình bày bảng 3 cột: Ý chính | Giải thích ngắn | Ví dụ minh họa trong bài. Nếu bài không có ví dụ, ghi &quot;Không có trong bài&quot;. Sau bảng, viết 1 câu tóm lại toàn bài (không quá 30 từ).<br>[Ví dụ mẫu một dòng]<br>| Cân bằng | Phân bố &quot;sức nặng thị giác&quot; của hình và màu để bức tranh không bị lệch | ... |<br>[Ràng buộc] Chỉ dùng thông tin có trong bài đọc, không tự thêm kiến thức bên ngoài.<br><br>Bài đọc:<br>[dán bài đọc]</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Role prompting + chain-of-thought (các bước) + few-shot (dòng mẫu) + định dạng bảng + ràng buộc chống bịa thông tin.</div><div class="prompt-result"><strong>Kết quả:</strong> 624 từ. Làm lần lượt đúng 4 bước, bảng 3 cột theo đúng dòng mẫu. Ghi “Không có trong bài” ở ý không có ví dụ, tức tuân thủ ràng buộc không bịa thông tin. Nhờ biết bối cảnh “thuyết trình 5 phút”, AI tự gợi ý phân bổ thời gian nói. Dài hơn vì hiển thị cả phần suy luận, nhưng bảng tóm tắt dùng được ngay.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">Chào bạn, dưới đây là phần tóm tắt theo đúng các bước bạn yêu cầu.
+
+## Bước 1. Luận điểm chính của tác giả
+
+Bố cục (composition) là cách tổ chức, sắp xếp một tác phẩm thị giác. Nó khác với đề tài (thứ được miêu tả). Cùng một đề tài có thể có rất nhiều cách bố cục. Để tạo cảm giác thống nhất, người nghệ sĩ dùng các yếu tố thiết kế và các kỹ thuật bố cục, dù cũng có người cố ý phá vỡ bố cục truyền thống.
+
+## Bước 2. Các nguyên lý và kỹ thuật bố cục được nhắc đến
+
+- Quy tắc một phần ba (Rule of thirds)
+- Quy tắc số lẻ (Rule of odds)
+- Quy tắc không gian (Rule of space)
+- Đơn giản hóa (Simplification), gồm cả trường ảnh nông (Shallow depth of field)
+- Hình học và đối xứng (Geometry and symmetry), tiêu biểu là hình tam giác
+
+Ngoài ra bài còn nêu 7 yếu tố thiết kế: đường nét, hình, màu sắc, chất cảm, giá trị (sắc độ đậm nhạt), khối và không gian.
+
+## Bước 3 và 4. Bảng tóm tắt (5 ý quan trọng nhất)
+
+| Ý chính | Giải thích ngắn | Ví dụ minh họa trong bài |
+|---|---|---|
+| Bố cục khác đề tài | Bố cục là cách tổ chức tác phẩm. Đề tài là thứ được vẽ. Một đề tài có thể được thể hiện bằng nhiều bố cục khác nhau. | Đề tài &quot;Thánh George và con rồng&quot;: thường chỉ có hai nhân vật nhưng được thể hiện bằng rất nhiều bố cục. |
+| Các yếu tố thiết kế | Là &quot;vốn từ&quot; của người làm nghệ thuật thị giác: đường nét, hình, màu, chất cảm, giá trị, khối, không gian. Các yếu tố này liên hệ với nhau và với tổng thể tác phẩm. | Không có trong bài |
+| Quy tắc một phần ba | Đặt các điểm quan trọng gần các đường chia ảnh thành ba phần (ngang và dọc), tốt nhất gần giao điểm, để chủ thể không chia đôi bức ảnh. | Đường chân trời không nên nằm chính giữa mà đặt gần một đường chia. |
+| Quy tắc số lẻ và hình tam giác | Số lượng chủ thể lẻ (ít nhất ba) thường thú vị và tự nhiên hơn số chẵn, vì số chẵn tạo đối xứng. Hình tam giác tạo cảm giác ổn định, mạnh mẽ. | Một người ở giữa, hai người hai bên, dễ tạo cảm giác thân thiện, dễ chịu. Cézanne dùng hình tam giác trong tranh tĩnh vật. |
+| Quy tắc không gian và đơn giản hóa | Chừa khoảng trống theo hướng nhìn hoặc hướng chuyển động để tạo cảm giác chuyển động. Giảm chi tiết thừa để người xem tập trung vào chủ thể. | Người chạy: chừa khoảng trống phía trước. Trong hội họa: nét vẽ ít chi tiết hơn ở rìa tranh. Trong nhiếp ảnh: khẩu độ rộng làm mờ nền. |
+
+**Tóm lại:** Bố cục là cách tổ chức tác phẩm, được xây từ các yếu tố thiết kế và các kỹ thuật như quy tắc một phần ba, số lẻ, không gian, đơn giản hóa, hình học.
+
+## Gợi ý nhỏ khi thuyết trình 5 phút
+
+Bạn nên dành khoảng 30 giây cho luận điểm, 1 phút cho bố cục khác đề tài và các yếu tố thiết kế, 3 phút cho ba nhóm kỹ thuật còn lại, rồi 30 giây để kết. Bài đọc cũng nêu rằng có nghệ sĩ như Salvador Dalí cố ý phá vỡ bố cục truyền thống, bạn có thể nhắc ngắn gọn ở phần kết.
+</div></details></div></div></div></div><div class="task-label">Tác vụ 2 — Giải thích khái niệm phức tạp</div><p class="task-goal">Mục đích: Hiểu rõ luật xa gần (phối cảnh) để áp dụng khi vẽ không gian, kiến trúc.</p><div class="prompt-grid"><div class="prompt-col p-basic"><div class="prompt-head">Prompt Cơ bản</div><div class="prompt-box"><div class="prompt-text">Luật xa gần là gì?</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Câu hỏi ngắn, AI không biết người hỏi là ai và cần hiểu sâu đến đâu.</div><div class="prompt-result"><strong>Kết quả:</strong> 566 từ. Kiến thức đúng và khá đầy đủ (3 loại phối cảnh, phối cảnh không khí, cách vẽ 1 điểm tụ) nhưng dàn trải, vì AI không biết người hỏi cần gì. Cuối bài AI phải hỏi lại “bạn đang học môn nào”.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">**Luật xa gần** (còn gọi là **luật phối cảnh**, tiếng Anh: *perspective*) là quy luật thể hiện không gian ba chiều lên một mặt phẳng hai chiều (giấy, toan vẽ, màn hình). Nó dựa trên cách mắt người nhìn: **vật ở càng xa thì trông càng nhỏ, càng mờ và các đường song song càng có xu hướng tụ lại.** Luật này được dùng nhiều trong hội họa, thiết kế, kiến trúc, nhiếp ảnh và hoạt hình.
+
+## 1. Các khái niệm cơ bản
+
+- **Đường chân trời (horizon line):** đường ngang ngang tầm mắt người nhìn. Khi bạn đứng thấp thì đường này thấp, đứng cao thì đường này cao.
+- **Điểm tụ (vanishing point):** điểm trên đường chân trời mà các đường song song (đường ray, mép đường, cạnh nhà...) dường như hội tụ lại.
+- **Đường xa gần (đường quy tụ):** các đường kẻ từ vật thể đi về điểm tụ.
+- **Tầm mắt:** vị trí đặt mắt của người quan sát, quyết định đường chân trời nằm ở đâu.
+
+## 2. Các loại phối cảnh phổ biến
+
+| Loại | Số điểm tụ | Đặc điểm | Ví dụ |
+|---|---|---|---|
+| **Phối cảnh 1 điểm tụ** (nhìn chính diện) | 1 | Một mặt của vật song song với người xem, các cạnh còn lại chạy về một điểm | Đường ray tàu hỏa, hành lang, con đường thẳng |
+| **Phối cảnh 2 điểm tụ** (nhìn góc) | 2 | Nhìn vào góc của vật thể, các cạnh chạy về hai điểm tụ ở hai bên | Ngôi nhà nhìn từ góc, hộp, tòa nhà |
+| **Phối cảnh 3 điểm tụ** | 3 | Thêm một điểm tụ phía trên hoặc dưới, tạo cảm giác cao hoặc sâu | Nhìn tòa nhà chọc trời từ dưới lên hoặc từ trên xuống |
+
+## 3. Luật xa gần trong màu sắc và sắc độ (phối cảnh không khí)
+
+Ngoài hình dạng, xa gần còn thể hiện qua:
+- **Kích thước:** gần to, xa nhỏ.
+- **Độ rõ nét:** gần thì chi tiết sắc nét, xa thì mờ, ít chi tiết.
+- **Độ đậm nhạt:** gần thì tương phản mạnh, xa thì nhạt và ít tương phản hơn.
+- **Màu sắc:** gần thì màu đậm, nóng, bão hòa; xa thì màu nhạt, lạnh, ngả xanh xám do lớp không khí.
+- **Chồng lấp:** vật ở gần che khuất một phần vật ở xa.
+
+## 4. Cách vẽ đơn giản (1 điểm tụ)
+
+1. Kẻ một **đường chân trời** nằm ngang.
+2. Chọn một **điểm tụ** trên đường đó.
+3. Vẽ mặt trước của vật thể (ví dụ hình vuông) bất kỳ.
+4. Nối các góc của hình vuông với điểm tụ bằng các đường mờ.
+5. Chọn độ sâu, kẻ cạnh sau song song với cạnh trước, rồi xóa các đường thừa.
+
+## 5. Ứng dụng
+
+Luật xa gần giúp tranh vẽ, bản vẽ kiến trúc, thiết kế nội thất, ảnh chụp và cảnh phim có **chiều sâu và chân thực**. Với sinh viên mỹ thuật, kiến trúc hoặc thiết kế, đây là kiến thức nền tảng cần nắm vững.
+
+Nếu bạn cần, mình có thể giải thích kỹ hơn về từng loại phối cảnh, hướng dẫn vẽ từng bước, hoặc giúp với bài tập cụ thể của bạn. Bạn đang học môn nào để mình trả lời đúng hướng hơn?
+</div></details></div></div></div><div class="prompt-col p-better"><div class="prompt-head">Prompt Cải tiến</div><div class="prompt-box"><div class="prompt-text">Giải thích luật xa gần (phối cảnh) trong hội họa cho sinh viên năm nhất ngành Mỹ thuật.<br>Yêu cầu: khoảng 250 từ, ngôn ngữ dễ hiểu; phân biệt phối cảnh 1 điểm tụ và 2 điểm tụ, mỗi loại có 1 ví dụ cụ thể.</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Thêm đối tượng, độ dài, nội dung bắt buộc phải có.</div><div class="prompt-result"><strong>Kết quả:</strong> 398 từ. Tập trung đúng phối cảnh 1 và 2 điểm tụ, ví dụ cụ thể (con đường thẳng, lớp học, ngôi nhà nhìn chéo góc) và thêm bảng so sánh. Dài hơn yêu cầu khoảng 250 từ gần 60%.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text"># Luật xa gần (phối cảnh) trong hội họa
+
+**Luật xa gần** là cách vẽ các vật thể trên mặt phẳng hai chiều sao cho người xem cảm nhận được chiều sâu như ngoài đời thật. Nguyên tắc cơ bản: vật càng xa càng nhỏ, các đường song song trong không gian có xu hướng hội tụ về một điểm ở xa. Hai khái niệm cần nhớ:
+
+- **Đường chân trời (EL – Eye Level):** đường ngang ngang tầm mắt người vẽ.
+- **Điểm tụ (VP – Vanishing Point):** điểm nằm trên đường chân trời, nơi các đường song song &quot;gặp nhau&quot;.
+
+## 1. Phối cảnh 1 điểm tụ
+
+Chỉ có **một điểm tụ** trên đường chân trời. Dùng khi ta nhìn **chính diện**: một mặt của vật thể song song với mặt tranh. Các cạnh ngang và dọc của mặt này giữ nguyên hướng, chỉ những đường chạy theo chiều sâu mới hội tụ về điểm tụ.
+
+**Ví dụ:** đứng giữa con đường thẳng nhìn về phía trước. Hai mép đường, hai hàng cây, hàng cột điện đều chạy về một điểm ở cuối đường. Hoặc vẽ trong lớp học: bức tường cuối phòng là hình chữ nhật thẳng, còn trần nhà, sàn nhà và hai tường bên chạy về điểm tụ ở giữa bức tường đó.
+
+## 2. Phối cảnh 2 điểm tụ
+
+Có **hai điểm tụ** ở hai đầu đường chân trời. Dùng khi nhìn vật thể **chéo góc**: không mặt nào song song với mặt tranh, ta thấy một góc cạnh hướng về phía mình. Các đường thẳng đứng vẫn thẳng đứng, còn các cạnh ngang chạy về hai điểm tụ trái và phải.
+
+**Ví dụ:** vẽ một ngôi nhà hoặc chiếc hộp đặt chéo góc. Cạnh đứng gần nhất là cạnh cao nhất; mái và chân tường bên trái chạy về điểm tụ trái, bên phải chạy về điểm tụ phải.
+
+## Tóm tắt nhanh
+
+| | 1 điểm tụ | 2 điểm tụ |
+|---|---|---|
+| Góc nhìn | Chính diện | Chéo góc |
+| Số điểm tụ | 1 | 2 |
+| Phù hợp | Hành lang, đường phố, nội thất | Nhà cửa, hộp, đường phố nhìn từ góc |
+
+**Lời khuyên:** hãy luyện vẽ hình hộp ở cả hai kiểu, thay đổi vị trí đường chân trời (cao, thấp) để thấy rõ vật thay đổi thế nào.
+</div></details></div></div></div><div class="prompt-col p-best"><div class="prompt-head">Prompt Nâng cao</div><div class="prompt-box"><div class="prompt-text">[Vai trò] Bạn là giảng viên môn Hình họa, giỏi giải thích bằng hình ảnh đời thường.<br>[Bối cảnh] Tôi đã vẽ được tĩnh vật cơ bản nhưng khi vẽ phố, nhà cửa thì các đường thẳng hay bị lệch, không có chiều sâu.<br>[Nhiệm vụ] Giải thích luật xa gần (phối cảnh) theo từng bước:<br>1. Đường chân trời (tầm mắt) là gì.<br>2. Điểm tụ là gì, vì sao các đường song song lại gặp nhau.<br>3. Phối cảnh 1 điểm tụ, 2 điểm tụ, 3 điểm tụ: dùng khi nào.<br>4. Ba lỗi người mới hay mắc và cách sửa.<br>[Ví dụ về cách giải thích tôi muốn] &quot;Đường chân trời giống như tầm mắt của bạn: ngồi xuống thì nó thấp, đứng lên ghế thì nó cao lên.&quot;<br>[Định dạng] Mỗi bước có tiêu đề in đậm, tối đa 4 câu. Thuật ngữ quan trọng ghi kèm tiếng Anh trong ngoặc. Cuối bài có 1 bài tập vẽ nhanh 10 phút và 3 câu hỏi tự kiểm tra.</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Role prompting + bối cảnh khó khăn cụ thể + chain-of-thought (giải thích từng bước) + few-shot (mẫu văn phong) + định dạng rõ.</div><div class="prompt-result"><strong>Kết quả:</strong> 782 từ. Bám đúng khó khăn “vẽ phố bị lệch”, dùng lại cách so sánh đời thường đã cho làm mẫu và tự thêm ví dụ đường ray, mặt biển. Đủ 4 bước, thuật ngữ có tiếng Anh, 3 lỗi thường gặp kèm cách sửa, bài tập 10 phút chia theo từng phút và 3 câu tự kiểm tra. Hạn chế: vài bước vượt giới hạn 4 câu.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">Chào bạn! Vẽ được tĩnh vật rồi thì bạn đã có nền tảng về hình khối và sáng tối. Phố và nhà cửa chỉ cần thêm một &quot;luật chơi&quot; nữa là phối cảnh. Mình đi lần lượt từng bước nhé.
+
+## **1. Đường chân trời (Horizon Line / Eye Level)**
+
+Đường chân trời giống như tầm mắt của bạn: ngồi xuống thì nó thấp, đứng lên ghế thì nó cao lên. Hãy nhìn ra biển: đường ngang nơi trời gặp nước luôn nằm ngang đúng tầm mắt bạn, dù bạn đứng ở đâu. Trong tranh phố, mọi thứ cao hơn đường này thì ta nhìn thấy mặt dưới (như mái hiên), mọi thứ thấp hơn thì ta nhìn thấy mặt trên (như nóc xe, mặt đường). Vì vậy việc đầu tiên khi vẽ là kẻ một đường ngang nhẹ tay để quyết định &quot;mắt mình đang ở đâu&quot;.
+
+## **2. Điểm tụ (Vanishing Point) và vì sao đường song song gặp nhau**
+
+Hãy nhớ cảnh đứng giữa đường ray xe lửa: hai thanh ray song song nhưng càng xa càng như chụm lại, rồi biến mất thành một chấm trên đường chân trời. Chấm đó là điểm tụ. Thực ra ray không hề chụm lại. Vật càng xa thì trông càng nhỏ trong mắt ta, nên khoảng cách giữa hai ray cũng &quot;nhỏ dần&quot; cho tới khi bằng không. Quy tắc cần nhớ: tất cả các đường song song trong thực tế, cùng hướng với nhau, sẽ hội tụ về cùng một điểm tụ nằm trên đường chân trời.
+
+## **3. Phối cảnh 1, 2, 3 điểm tụ (One-, Two-, Three-Point Perspective)**
+
+- **1 điểm tụ:** dùng khi bạn nhìn thẳng vào một mặt phẳng, ví dụ đứng giữa con hẻm, hành lang hoặc nhìn thẳng vào mặt tiền. Các đường ngang và đứng vẫn song song, chỉ các đường chạy vào chiều sâu mới tụ về một điểm.
+- **2 điểm tụ:** dùng khi bạn đứng nhìn vào góc nhà (nhìn chéo), đây là kiểu phổ biến nhất khi vẽ phố. Hai mặt tường chạy về hai điểm tụ ở hai đầu đường chân trời, còn các đường thẳng đứng vẫn thẳng đứng.
+- **3 điểm tụ:** dùng khi nhìn lên tòa nhà cao hoặc nhìn xuống từ trên cao. Ngoài hai điểm tụ ngang, có thêm điểm thứ ba ở rất cao hoặc rất thấp, khiến các đường thẳng đứng cũng nghiêng dần về điểm đó.
+
+## **4. Ba lỗi người mới hay mắc và cách sửa**
+
+- **Lỗi 1: Không kẻ đường chân trời, vẽ &quot;theo cảm giác&quot;.** Mỗi vật một tầm mắt nên tranh bị lệch. Cách sửa: luôn kẻ đường chân trời và đánh dấu điểm tụ trước, dùng thước hoặc cạnh bút làm đường dẫn.
+- **Lỗi 2: Các đường chạy vào chiều sâu không cùng tụ về một điểm.** Nhà này một hướng, nhà kia một hướng. Cách sửa: kéo dài thử các đường bằng nét mờ cho tới khi chạm đường chân trời, nếu chúng không gặp nhau ở cùng một điểm thì chỉnh lại.
+- **Lỗi 3: Đặt hai điểm tụ quá gần nhau.** Ngôi nhà bị méo như bị &quot;bóp&quot; lại. Cách sửa: đặt hai điểm tụ cách xa nhau (có thể ra ngoài mép giấy), vật sẽ trông tự nhiên hơn.
+
+## **Bài tập vẽ nhanh 10 phút**
+
+Ra cửa sổ hoặc ra ban công, chọn một con hẻm hoặc một góc phố. Làm theo thứ tự sau:
+1. (1 phút) Kẻ đường chân trời ngang tầm mắt, chấm điểm tụ.
+2. (3 phút) Vẽ một dãy 3 căn nhà bằng các hộp khối đơn giản, dùng nét mờ kéo các đường về điểm tụ.
+3. (4 phút) Thêm cửa sổ, cửa ra vào, cột điện sao cho cùng tụ về điểm đó, chú ý càng xa càng nhỏ.
+4. (2 phút) Tô đậm nét chính và kiểm tra lại các đường có &quot;đi đúng hướng&quot; không.
+
+Đừng cố vẽ chi tiết, mục tiêu chỉ là các đường đi đúng hướng.
+
+## **3 câu hỏi tự kiểm tra**
+
+1. Nếu bạn ngồi xuống bãi cỏ rồi đứng lên, đường chân trời trong tranh sẽ thay đổi thế nào?
+2. Vì sao khi vẽ nhìn chéo vào góc nhà thì các đường thẳng đứng của tòa nhà vẫn giữ thẳng đứng, còn khi nhìn ngửa lên tòa nhà rất cao thì chúng lại nghiêng?
+3. Bạn đang vẽ một con hẻm nhìn thẳng vào chiều sâu, bạn dùng phối cảnh mấy điểm tụ, và các đường nào trong tranh vẫn nằm ngang, không tụ về đâu?
+
+Vẽ xong bạn cứ gửi lại cho mình nhận xét nhé, chúc bạn luyện tập vui!
+</div></details></div></div></div></div><div class="task-label">Tác vụ 3 — Tạo bộ câu hỏi ôn tập</div><p class="task-goal">Mục đích: Ôn tập lý thuyết màu sắc trước bài kiểm tra.</p><div class="prompt-grid"><div class="prompt-col p-basic"><div class="prompt-head">Prompt Cơ bản</div><div class="prompt-box"><div class="prompt-text">Tạo câu hỏi ôn tập về màu sắc.</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Không rõ số lượng, dạng câu hỏi, mức độ khó.</div><div class="prompt-result"><strong>Kết quả:</strong> 1.000 từ. AI phải tự đoán phạm vi nên ra 22 câu trộn 4 dạng, lẫn cả kiến thức vật lý (tán sắc ánh sáng), hệ màu RGB/CMYK và tâm lý màu trong thương hiệu, nhiều câu nằm ngoài nội dung hội họa. Cuối bài AI hỏi lại để điều chỉnh.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text"># Câu hỏi ôn tập về màu sắc
+
+Bạn chưa nói rõ môn học nên mình soạn bộ câu hỏi theo hướng **lý thuyết màu sắc cơ bản** (mỹ thuật, thiết kế) và có thêm vài câu về **vật lý và thị giác**. Cuối bài có đáp án và gợi ý để mình chỉnh lại cho đúng nhu cầu của bạn.
+
+## Phần 1. Trắc nghiệm
+
+**Câu 1.** Ba màu cơ bản (màu gốc) trong mô hình màu truyền thống của mỹ thuật (RYB) là:
+A. Đỏ, lục, lam
+B. Đỏ, vàng, lam
+C. Cyan, magenta, vàng
+D. Đỏ, cam, vàng
+
+**Câu 2.** Trộn màu đỏ và màu vàng (theo RYB) sẽ cho ra màu:
+A. Xanh lục
+B. Tím
+C. Cam
+D. Nâu
+
+**Câu 3.** Cặp màu nào sau đây là cặp màu bổ túc (đối lập nhau trên vòng màu)?
+A. Đỏ và cam
+B. Xanh lam và cam
+C. Vàng và xanh lục
+D. Tím và đỏ
+
+**Câu 4.** Mô hình màu nào được dùng cho màn hình điện tử (tivi, điện thoại, máy tính)?
+A. CMYK
+B. RGB
+C. RYB
+D. Pantone
+
+**Câu 5.** Mô hình CMYK chủ yếu được dùng trong:
+A. Thiết kế giao diện web
+B. In ấn
+C. Chiếu sáng sân khấu
+D. Chụp ảnh thiên văn
+
+**Câu 6.** Khi thêm màu trắng vào một màu, ta được:
+A. Sắc thái (shade)
+B. Sắc độ nhạt (tint)
+C. Tông màu xám (tone)
+D. Màu bổ túc
+
+**Câu 7.** Trong ba thuộc tính của màu sắc (Hue, Saturation, Value), &quot;Saturation&quot; chỉ:
+A. Tên màu
+B. Độ sáng tối
+C. Độ tinh khiết, độ rực của màu
+D. Nhiệt độ màu
+
+**Câu 8.** Nhóm màu nào dưới đây là màu nóng?
+A. Xanh lam, xanh lục, tím
+B. Đỏ, cam, vàng
+C. Xám, trắng, đen
+D. Xanh lam, xám, trắng
+
+**Câu 9.** Ánh sáng trắng khi đi qua lăng kính bị phân tách thành dải màu liên tục. Hiện tượng này gọi là:
+A. Phản xạ
+B. Giao thoa
+C. Tán sắc
+D. Nhiễu xạ
+
+**Câu 10.** Trong mô hình RGB (trộn ánh sáng), trộn đỏ + lục + lam với cường độ tối đa sẽ cho màu:
+A. Đen
+B. Trắng
+C. Xám
+D. Nâu
+
+## Phần 2. Đúng hay sai (giải thích ngắn)
+
+**Câu 11.** Trộn ba màu gốc với nhau theo tỉ lệ bằng nhau (với màu vẽ) sẽ cho ra màu trắng.
+
+**Câu 12.** Màu đen, trắng và xám được gọi là các màu trung tính (vô sắc).
+
+**Câu 13.** Màu tương đồng (analogous) là các màu nằm cạnh nhau trên vòng màu, ví dụ vàng, vàng cam và cam.
+
+**Câu 14.** Màu nguội thường gợi cảm giác gần, ấm áp và sôi động hơn màu nóng.
+
+## Phần 3. Điền vào chỗ trống
+
+**Câu 15.** Màu bậc hai (thứ cấp) được tạo ra bằng cách trộn hai màu ______.
+
+**Câu 16.** Ba màu bậc hai trong RYB là ______, ______ và ______.
+
+**Câu 17.** Thêm màu đen vào một màu sẽ tạo ra ______ (shade) của màu đó, làm màu tối hơn.
+
+**Câu 18.** Mắt người nhìn thấy màu nhờ các tế bào cảm thụ ánh sáng trên võng mạc gọi là tế bào ______ (nhận biết màu) và tế bào que (nhận biết sáng tối).
+
+## Phần 4. Tự luận ngắn
+
+**Câu 19.** Phân biệt màu cộng (additive, RGB) và màu trừ (subtractive, CMYK). Cho ví dụ ứng dụng của mỗi loại.
+
+**Câu 20.** Nêu 3 loại bảng phối màu (màu bổ túc, màu tương đồng, màu đơn sắc) và cho biết mỗi loại tạo cảm giác gì cho người xem.
+
+**Câu 21.** Vì sao các thương hiệu thức ăn nhanh hay dùng màu đỏ và vàng trong logo? Phân tích dựa trên tâm lý màu sắc.
+
+**Câu 22.** Một poster có nền xanh lam đậm. Em sẽ chọn màu nào cho tiêu đề để nổi bật nhất? Giải thích vì sao.
+
+---
+
+## Đáp án
+
+**Trắc nghiệm:** 1-B, 2-C, 3-B, 4-B, 5-B, 6-B, 7-C, 8-B, 9-C, 10-B.
+
+**Đúng/Sai:**
+- Câu 11: Sai. Trộn ba màu gốc màu vẽ thường ra màu nâu hoặc xám đậm, không ra trắng. Màu trắng chỉ có khi trộn ánh sáng (RGB).
+- Câu 12: Đúng. Chúng không có sắc độ (hue).
+- Câu 13: Đúng.
+- Câu 14: Sai. Màu nóng mới gợi cảm giác ấm, gần, sôi động; màu nguội gợi cảm giác mát, xa, tĩnh lặng.
+
+**Điền khuyết:**
+- Câu 15: cơ bản (màu gốc).
+- Câu 16: cam, lục (xanh lá), tím.
+- Câu 17: sắc thái (độ tối).
+- Câu 18: tế bào nón.
+
+**Tự luận (gợi ý):**
+- Câu 19: Màu cộng tạo màu bằng cách cộng các ánh sáng (đỏ, lục, lam), càng cộng càng sáng, dùng cho màn hình, đèn chiếu. Màu trừ tạo màu bằng cách mực hấp thụ bớt ánh sáng (cyan, magenta, vàng, đen), càng trộn càng tối, dùng cho in ấn.
+- Câu 20: Bổ túc cho độ tương phản mạnh, nổi bật; tương đồng cho cảm giác hài hòa, dễ chịu; đơn sắc cho cảm giác thống nhất, tinh tế, tối giản.
+- Câu 21: Đỏ kích thích sự thèm ăn, tạo cảm giác khẩn trương, thu hút chú ý; vàng gợi sự vui vẻ, thân thiện, dễ nhìn thấy từ xa. Hai màu này kết hợp thúc đẩy ăn nhanh và ra quyết định nhanh.
+- Câu 22: Nên dùng màu vàng hoặc cam sáng (màu bổ túc/tương phản mạnh với xanh lam), hoặc trắng để đảm bảo độ tương phản cao, dễ đọc.
+
+---
+
+Bạn muốn mình điều chỉnh không? Ví dụ:
+- Đúng môn học của bạn (Vật lý, Mỹ thuật, Thiết kế đồ họa, Tâm lý học, hay tiếng Việt về từ chỉ màu sắc).
+- Số lượng câu, mức độ (cơ bản hay nâng cao), hoặc chỉ một dạng câu hỏi (trắc nghiệm, tự luận).
+- Nếu có tài liệu hoặc chương cụ thể, bạn gửi nội dung để mình bám sát đề cương.
+</div></details></div></div></div><div class="prompt-col p-better"><div class="prompt-head">Prompt Cải tiến</div><div class="prompt-box"><div class="prompt-text">Tạo 10 câu hỏi trắc nghiệm (4 lựa chọn A–D) ôn tập lý thuyết màu sắc trong hội họa: vòng thuần sắc, màu bổ túc, sắc độ, màu nóng – lạnh. Ghi đáp án ở cuối.</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Thêm số lượng, dạng câu hỏi, phạm vi kiến thức, đáp án.</div><div class="prompt-result"><strong>Kết quả:</strong> 650 từ. Đúng 10 câu trắc nghiệm A–D, đúng phạm vi (vòng thuần sắc, bổ túc, sắc độ, nóng – lạnh), có bảng đáp án và còn thêm giải thích ngắn. Câu hỏi chủ yếu ở mức nhớ, chưa phân mức độ khó.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text"># 10 câu hỏi trắc nghiệm ôn tập lý thuyết màu sắc trong hội họa
+
+**Câu 1.** Ba màu cơ bản (màu gốc) trong vòng thuần sắc truyền thống của hội họa là:
+- A. Đỏ, vàng, lam
+- B. Đỏ, lục, lam
+- C. Cam, lục, tím
+- D. Vàng, lục, cam
+
+**Câu 2.** Màu bổ túc của màu đỏ trên vòng thuần sắc là:
+- A. Cam
+- B. Tím
+- C. Lục
+- D. Vàng
+
+**Câu 3.** Khi pha trộn hai màu cơ bản với nhau theo tỉ lệ bằng nhau, ta thu được:
+- A. Màu bậc hai (màu thứ cấp)
+- B. Màu bậc ba
+- C. Màu trung tính
+- D. Màu bổ túc
+
+**Câu 4.** Cặp màu nào sau đây là cặp màu bổ túc?
+- A. Vàng và cam
+- B. Lam và lục
+- C. Vàng và tím
+- D. Đỏ và cam
+
+**Câu 5.** Khi đặt hai màu bổ túc cạnh nhau với độ bão hòa cao, hiệu quả thị giác thường là:
+- A. Hai màu hòa lẫn, dịu nhẹ
+- B. Hai màu tương phản mạnh, làm nổi bật nhau
+- C. Cả hai màu đều bị mờ đi
+- D. Tạo cảm giác chuyển sắc êm ái
+
+**Câu 6.** Trộn hai màu bổ túc với nhau theo tỉ lệ thích hợp sẽ cho ra:
+- A. Màu rực rỡ hơn
+- B. Màu thuần sắc mới
+- C. Màu trung tính (xám nâu)
+- D. Màu trắng
+
+**Câu 7.** &quot;Sắc độ&quot; (độ đậm nhạt, giá trị sáng tối của màu) trong hội họa chỉ:
+- A. Tên gọi của màu như đỏ, vàng, lam
+- B. Mức độ sáng – tối của màu
+- C. Mức độ tinh khiết (rực rỡ hay xỉn) của màu
+- D. Nhiệt độ của màu
+
+**Câu 8.** Để làm một màu sáng hơn (tạo sắc độ nhạt) trong tranh màu nước, họa sĩ thường:
+- A. Thêm nhiều màu đen
+- B. Thêm màu bổ túc
+- C. Pha loãng thêm nước (hoặc chừa lớp giấy trắng)
+- D. Thêm màu nóng
+
+**Câu 9.** Nhóm màu nào sau đây thuộc nhóm màu nóng?
+- A. Lam, lục lam, tím xanh
+- B. Đỏ, cam, vàng
+- C. Lục, lam, tím
+- D. Xám, đen, trắng
+
+**Câu 10.** Trong bố cục tranh, để tạo cảm giác không gian xa, sâu, họa sĩ thường dùng màu ở hậu cảnh là:
+- A. Màu nóng, đậm, rực
+- B. Màu lạnh, nhạt, ít tương phản
+- C. Màu đỏ thuần
+- D. Màu vàng cam sáng
+
+---
+
+## Đáp án
+
+| Câu | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Đáp án | A | C | A | C | B | C | B | C | B | B |
+
+**Giải thích ngắn:**
+1. Đỏ, vàng, lam là ba màu cơ bản của vòng thuần sắc truyền thống (RYB).
+2. Đỏ đối diện lục trên vòng màu.
+3. Đỏ + vàng = cam, vàng + lam = lục, lam + đỏ = tím: đây là các màu bậc hai.
+4. Vàng đối diện tím. Các cặp bổ túc khác: đỏ – lục, lam – cam.
+5. Màu bổ túc đặt cạnh nhau tăng độ tương phản và làm nổi bật nhau.
+6. Hai màu bổ túc trộn lại triệt tiêu nhau, cho màu xám nâu trung tính.
+7. Sắc độ là mức sáng – tối của màu. Câu C nói về độ bão hòa, câu D nói về nhiệt độ màu.
+8. Màu nước không dùng màu trắng, nên làm sáng bằng cách pha loãng hoặc chừa giấy.
+9. Đỏ, cam, vàng gợi cảm giác ấm, thuộc nhóm màu nóng.
+10. Màu lạnh, nhạt, ít tương phản tạo cảm giác lùi xa (phối cảnh màu sắc).
+</div></details></div></div></div><div class="prompt-col p-best"><div class="prompt-head">Prompt Nâng cao</div><div class="prompt-box"><div class="prompt-text">[Vai trò] Bạn là giảng viên môn Màu sắc, có kinh nghiệm ra đề kiểm tra cho sinh viên Mỹ thuật.<br>[Bối cảnh] Tôi chuẩn bị kiểm tra giữa kỳ, phạm vi: vòng thuần sắc, màu nguyên sắc – màu bậc 2, màu bổ túc, sắc độ (độ đậm nhạt), màu nóng – lạnh, tương phản màu.<br>[Các bước] Trước khi viết câu hỏi, hãy liệt kê các khái niệm trọng tâm. Sau khi viết xong, tự kiểm tra lại từng đáp án.<br>[Yêu cầu] 10 câu, chia theo mức độ: 4 câu nhận biết, 4 câu thông hiểu, 2 câu vận dụng (cho một tình huống phối màu cụ thể khi vẽ tranh). Gồm 8 câu trắc nghiệm A–D và 2 câu tự luận ngắn.<br>[Ví dụ mẫu]<br>Câu 1 (Nhận biết): Màu bổ túc của màu đỏ là:<br>A. Vàng  B. Lục  C. Lam  D. Tím<br>→ Đáp án: B. Giải thích: đỏ và lục nằm đối diện nhau trên vòng thuần sắc.<br>[Định dạng] Ghi mức độ ở đầu mỗi câu; đáp án và giải thích 1 câu ngay dưới câu hỏi.</div><div class="prompt-tech"><strong>Kỹ thuật:</strong> Role prompting + phạm vi kiến thức rõ + phân mức độ nhận thức (Bloom) + few-shot (câu hỏi mẫu) + chain-of-thought (liệt kê trước, tự kiểm tra sau).</div><div class="prompt-result"><strong>Kết quả:</strong> 1.309 từ. Liệt kê 7 khái niệm trọng tâm trước khi ra đề; đúng phân bố 4 nhận biết, 4 thông hiểu, 2 vận dụng; đúng 8 trắc nghiệm và 2 tự luận. Câu vận dụng gắn với tình huống vẽ thật (tranh hoàng hôn, tĩnh vật) kèm thang điểm. AI tự kiểm tra từng đáp án và còn phát hiện đáp án đúng dồn nhiều vào phương án A. Đề dùng được ngay.<details class="raw-out"><summary>Xem toàn văn câu trả lời của AI</summary><div class="raw-text">## Bước 1: Các khái niệm trọng tâm (theo vòng thuần sắc 12 màu trong mỹ thuật)
+
+1. **Vòng thuần sắc**: sắp xếp các màu theo thứ tự quang phổ, gồm 12 màu.
+2. **Màu nguyên sắc (bậc 1)**: đỏ, vàng, lam. Không pha được từ màu khác.
+3. **Màu bậc 2**: pha từ hai nguyên sắc. Vàng + lam = lục, vàng + đỏ = cam, đỏ + lam = tím.
+4. **Màu bổ túc**: hai màu đối diện nhau trên vòng thuần sắc. Đỏ – lục, vàng – tím, lam – cam.
+5. **Sắc độ**: mức đậm – nhạt (sáng – tối) của một màu. Thêm trắng thì nhạt đi, thêm đen hoặc màu tối thì đậm lên.
+6. **Màu nóng – lạnh**: gam nóng (đỏ, cam, vàng) gợi ấm, gần. Gam lạnh (lam, lục lam, tím lam) gợi mát, xa. Tính nóng – lạnh còn mang tính tương đối khi đặt cạnh nhau.
+7. **Tương phản màu**: tương phản bổ túc, tương phản nóng – lạnh, tương phản sắc độ (đậm – nhạt). Màu cạnh nhau làm nổi bật nhau.
+
+---
+
+## Bước 2: Đề kiểm tra giữa kỳ (10 câu)
+
+**Câu 1 (Nhận biết):** Ba màu nguyên sắc trên vòng thuần sắc là:
+A. Đỏ, vàng, lam  B. Đỏ, lục, lam  C. Cam, lục, tím  D. Vàng, cam, đỏ
+→ Đáp án: A. Giải thích: đỏ, vàng, lam không thể pha từ màu khác và là gốc để pha ra các màu còn lại.
+
+**Câu 2 (Nhận biết):** Pha màu vàng với màu lam theo tỉ lệ cân bằng sẽ được màu bậc 2 là:
+A. Cam  B. Tím  C. Lục  D. Nâu
+→ Đáp án: C. Giải thích: vàng + lam = lục, một trong ba màu bậc 2 (cam, lục, tím).
+
+**Câu 3 (Nhận biết):** Cặp màu nào sau đây là cặp màu bổ túc?
+A. Vàng – Tím  B. Đỏ – Cam  C. Lam – Lục  D. Vàng – Lục
+→ Đáp án: A. Giải thích: vàng và tím nằm đối diện nhau trên vòng thuần sắc, còn các cặp kia là màu kề nhau.
+
+**Câu 4 (Nhận biết):** Nhóm màu nào sau đây đều thuộc gam màu nóng?
+A. Đỏ, cam, vàng  B. Lam, lục, tím  C. Vàng, lục, lam  D. Đỏ, tím, lam
+→ Đáp án: A. Giải thích: đỏ, cam, vàng gợi cảm giác ấm, nóng (như lửa, ánh nắng), các nhóm còn lại có màu lạnh.
+
+**Câu 5 (Thông hiểu):** Khi nói &quot;sắc độ&quot; của một màu, ta đề cập đến:
+A. Tên gọi của màu trên vòng thuần sắc  B. Mức đậm – nhạt (sáng – tối) của màu  C. Cảm giác nóng hay lạnh của màu  D. Việc màu đó là nguyên sắc hay bậc 2
+→ Đáp án: B. Giải thích: sắc độ là mức sáng – tối của màu, thay đổi khi ta thêm trắng (nhạt) hoặc thêm đen/màu tối (đậm).
+
+**Câu 6 (Thông hiểu):** Khi pha hai màu bổ túc với nhau theo tỉ lệ gần bằng nhau, thường thu được màu nào?
+A. Một màu rực rỡ hơn cả hai màu ban đầu  B. Một màu nóng  C. Một màu xám nâu trung tính, giảm độ thuần  D. Một màu bậc 3 sáng hơn
+→ Đáp án: C. Giải thích: hai màu bổ túc gộp lại chứa đủ cả ba nguyên sắc nên triệt tiêu độ thuần của nhau và ra màu xám nâu.
+
+**Câu 7 (Thông hiểu):** Muốn mảng màu đỏ trong tranh trông rực và nổi bật hơn, cách nào hiệu quả nhất?
+A. Đặt cạnh màu lục (màu bổ túc)  B. Đặt cạnh màu cam  C. Đặt cạnh màu đỏ tím  D. Đặt cạnh một màu đỏ nhạt hơn
+→ Đáp án: A. Giải thích: màu bổ túc đặt cạnh nhau làm nhau nổi bật hơn (tương phản bổ túc), còn các màu kề nhau thì hòa hợp, ít nổi.
+
+**Câu 8 (Thông hiểu, tự luận ngắn):** Phân biệt màu nguyên sắc và màu bậc 2. Mỗi loại nêu một ví dụ.
+→ Đáp án gợi ý: màu nguyên sắc (đỏ, vàng, lam) không pha được từ các màu khác, còn màu bậc 2 (cam, lục, tím) được pha từ hai màu nguyên sắc, ví dụ vàng + lam = lục. (Thang điểm: 1 ý định nghĩa nguyên sắc, 1 ý định nghĩa bậc 2, mỗi ví dụ đúng đạt điểm.)
+
+**Câu 9 (Vận dụng):** Bạn vẽ một bức tranh hoàng hôn có bầu trời chủ đạo là màu cam rực. Muốn tạo điểm nhấn tương phản mạnh nhưng vẫn có cơ sở hài hòa cho mảng bóng cây và mặt nước, bạn nên chọn:
+A. Màu lam (có thể làm đậm)  B. Màu đỏ cam  C. Màu vàng cam  D. Màu vàng lục
+→ Đáp án: A. Giải thích: lam là màu bổ túc của cam nên vừa tạo tương phản bổ túc, vừa tạo tương phản nóng – lạnh, làm bầu trời cam rực hơn.
+
+**Câu 10 (Vận dụng, tự luận ngắn):** Bạn vẽ một tranh tĩnh vật có tông chủ đạo lạnh (nền lam, lục lam) và muốn quả cam là điểm nhấn. Hãy nêu cách phối màu cho nền, cho quả cam và cho bóng đổ của quả cam, và cho biết đã dùng những loại tương phản nào.
+→ Đáp án gợi ý: nền dùng lam hoặc lục lam nhạt – vừa; quả cam giữ cam tươi, diện tích nhỏ, đặt ở trung tâm; bóng đổ pha cam với một ít lam (màu bổ túc) để có bóng trầm mà vẫn hài hòa. Các tương phản đã dùng là tương phản nóng – lạnh (cam trên nền lạnh), tương phản bổ túc (cam – lam) và tương phản sắc độ (cam sáng, bóng đậm). (Thang điểm gợi ý: mỗi ý về nền, quả, bóng 1 điểm, nêu đúng ít nhất 2 loại tương phản 1 điểm.)
+
+---
+
+## Bước 3: Tự kiểm tra đáp án
+
+- Câu 1: đúng, nguyên sắc là đỏ, vàng, lam. Phương án B lẫn nguyên sắc ánh sáng (hệ RGB), C là màu bậc 2.
+- Câu 2: đúng, vàng + lam = lục. Chỉ có một đáp án đúng.
+- Câu 3: đúng, vàng – tím đối diện. Đỏ – cam và vàng – lục là màu kề, lam – lục cũng kề.
+- Câu 4: đúng. B, C, D đều lẫn màu lạnh nên chỉ A đúng.
+- Câu 5: đúng, sắc độ là đậm nhạt, các phương án còn lại là các khái niệm khác.
+- Câu 6: đúng. Đây là quy ước pha màu vẽ, đã nêu rõ &quot;tỉ lệ gần bằng nhau&quot;. Các phương án còn lại sai.
+- Câu 7: đúng, A là tương phản bổ túc (đỏ – lục). B, C, D là các màu kề hoặc cùng màu nên không làm đỏ nổi hơn.
+- Câu 8: đáp án mở, nhưng phải có đủ hai khái niệm và ví dụ đúng (nguyên sắc: đỏ, vàng, lam; bậc 2: cam, lục, tím).
+- Câu 9: đúng, cam – lam là cặp bổ túc, đồng thời là cặp nóng – lạnh. Các phương án B, C, D là màu cùng gam nóng hoặc kề cam nên không tạo tương phản mạnh.
+- Câu 10: đáp án mở, đã kiểm tra tính nhất quán, cam – lam là bổ túc, cam nóng trên nền lạnh, bóng đậm hơn thể hiện sắc độ.
+
+**Phân bố:** 4 nhận biết (câu 1–4), 4 thông hiểu (câu 5–8), 2 vận dụng (câu 9–10). Gồm 8 trắc nghiệm (câu 1–7, 9) và 2 tự luận ngắn (câu 8, 10). Đáp án trắc nghiệm gồm A (câu 1, 3, 4, 7, 9), B (câu 5), C (câu 2, 6), nên bạn có thể xáo thứ tự phương án để các đáp án phân bố đều hơn trước khi in đề.
+</div></details></div></div></div></div></div>
+    <div class="project-section"><div class="project-section-label">Công cụ sử dụng</div><div class="tools-row"><span class="tool-tag">Claude Sonnet (thử nghiệm 9 prompt)</span><span class="tool-tag">Claude (góp ý cấu trúc prompt)</span><span class="tool-tag">Wikipedia (bài đọc)</span></div></div>
+    <div class="project-section"><div class="project-section-label">c) Sản phẩm cuối cùng</div><h3>Bảng so sánh tổng hợp (độ dài câu trả lời)</h3>
+<div class="table-wrap"><table><thead><tr><th>Tác vụ</th><th>Cơ bản</th><th>Cải tiến</th><th>Nâng cao</th><th>Hiệu quả nhất</th></tr></thead><tbody><tr><td>Tóm tắt tài liệu học thuật</td><td>650 từ</td><td>266 từ</td><td>624 từ</td><td>Nâng cao</td></tr><tr><td>Giải thích khái niệm phức tạp</td><td>566 từ</td><td>398 từ</td><td>782 từ</td><td>Nâng cao</td></tr><tr><td>Tạo bộ câu hỏi ôn tập</td><td>1000 từ</td><td>650 từ</td><td>1309 từ</td><td>Nâng cao</td></tr></tbody></table></div>
+<h3>Nguyên tắc viết prompt hiệu quả rút ra từ thử nghiệm</h3>
+<ul class="goal-list"><li>Nói rõ mình là ai và đang gặp khó khăn gì: AI sẽ chọn đúng trọng tâm thay vì trả lời dàn trải.</li><li>Đưa một ví dụ mẫu (một dòng bảng, một câu hỏi, một câu giải thích): đây là cách nhanh nhất để AI làm đúng định dạng.</li><li>Chia nhiệm vụ thành các bước và yêu cầu AI tự kiểm tra: kết quả có hệ thống và ít sai sót hơn.</li><li>Giới hạn phạm vi và ràng buộc (“chỉ dùng thông tin trong bài”): tránh AI tự thêm kiến thức ngoài lề.</li><li>Luôn đọc lại và kiểm chứng: AI vẫn vượt giới hạn độ dài và có thể sai; prompt tốt không thay thế việc kiểm tra.</li></ul>
+<p class="placeholder-note">Báo cáo Bài 3 kèm ảnh chụp kết quả — <span class="todo">chờ link Google Drive công khai</span></p></div>
+  </div>
+</article>
+<nav class="pager" aria-label="Chuyển trang">
+  <a href="projects.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg> Quay lại Dự án</a>
+  <a class="next" href="bai-4.html">Bài 4: Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+</nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="left">Portfolio của <strong>Dương Thị Hương Giang</strong> · MSSV: 2554040090 · Lớp: K19B – Khoa Thiết kế Thời trang · Nhập môn Công nghệ số và ứng dụng trí tuệ nhân tạo (INF2501-8)</div>
+  <div class="submit-badge">Trường Đại học Sư phạm Nghệ thuật Trung ương</div>
+</footer>
+<script src="assets/site.js?v=2"></script>
+</body>
+</html>
