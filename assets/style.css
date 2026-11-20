@@ -323,3 +323,7 @@ main + .site-footer { margin-top: 56px; }
   .ex-split > .ex-media { width: 100%; }
   .site-footer { margin: 0 16px 32px; flex-direction: column; text-align: center; }
 }
+
+/* Trình xem file Word nhúng */
+.embed-doc iframe { aspect-ratio: auto; height: 720px; }
+@media (max-width: 640px) { .embed-doc iframe { height: 520px; } }
