@@ -327,3 +327,7 @@ main + .site-footer { margin-top: 56px; }
 /* Trình xem file Word nhúng */
 .embed-doc iframe { aspect-ratio: auto; height: 720px; }
 @media (max-width: 640px) { .embed-doc iframe { height: 520px; } }
+
+/* Nút chuyển trang ở cuối trang Giới thiệu */
+.page-pager { max-width: 868px; margin: 0 auto; padding: 0 24px 56px; }
+@media (max-width: 640px) { .pager a { flex: 1 1 100%; justify-content: center; } .pager a.next { margin-left: 0; } }
