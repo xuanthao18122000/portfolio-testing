@@ -20,3 +20,9 @@ if ('IntersectionObserver' in window) {
 } else {
   items.forEach((el) => el.classList.add('in'));
 }
+
+// Khung xem file Word: tự lấy địa chỉ đầy đủ của file theo trang web đang mở
+document.querySelectorAll('iframe[data-doc]').forEach((f) => {
+  const url = new URL(f.dataset.doc, location.href).href;
+  f.src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(url);
+});
